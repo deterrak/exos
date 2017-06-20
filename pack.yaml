@@ -1,0 +1,9 @@
+---
+name: EXOS
+description: A simple pack containing examples of sensors, rules, and actions.
+keywords:
+    - example
+    - test
+version: 0.1
+author: Kevin DeTerra
+email: kdeterra@brocade.com

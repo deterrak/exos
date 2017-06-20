@@ -1,0 +1,48 @@
+---
+name: exos_configure_cli
+pack: EXOS
+runner_type: "local-shell-cmd"
+description: "Configure the Extreme EXOS switch command line via SSH" 
+enabled: true
+#entry_point: exos_configure_cli.py
+entry_point: '' 
+parameters:
+    Username:
+        type: string
+        default: 'user'
+        description: "The Username to login to the switch"
+        required: true
+        position: 1
+    Password:
+        type: string
+        default: 'password'
+        description: "The Password required to authenticate the user"
+        required: true
+        position: 2
+    TargetIP:
+        type: string
+        default: '172.16.142.55'
+        description: "The target IP address of the switch"
+        required: true
+        position: 3
+    CommandFile:
+        type: string
+        default: 'CMD.txt'
+        description: "The command file contains a list of commands to be executed in configure mode"
+        required: true
+        position: 4
+    LogFile:
+        type: string
+        default: 'myLog.log'
+        description: "The logfile that will capture the interactive session"
+        required: false 
+        position: 5
+    cmd:
+        type: string
+        default: '/opt/stackstorm/packs/EXOS/actions/exos_configure_cli.py -i {{TargetIP}} -c {{CommandFile}} -l {{LogFile}} -u {{Username}} -p {{Password}}'
+        description: "The command that will be run"
+        immutable: true
+    cwd:
+        default: "/home/stanley/"
+        immutable: false
+
