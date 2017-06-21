@@ -24,7 +24,8 @@ Install the dependencies and devDependencies and start the server.
 cd /opt/stackstorm/packs/EXOS
 
 ```sh
-$ Get EXOS from github (https://github.com/deterrak/exos) 
+$ suod apt-get install python-pexpect
+$ #Get EXOS from github (https://github.com/deterrak/exos) 
 $ sudo st2 run packs.setup_virtualenv packs=EXOS
 $ sudo st2ctl reload
 ```
