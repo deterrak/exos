@@ -25,7 +25,8 @@ cd /opt/stackstorm/packs/EXOS
 
 ```sh
 $ suod apt-get install python-pexpect
-$ #Get EXOS from github (https://github.com/deterrak/exos) 
+$ #Get EXOS from github (https://github.com/deterrak/exos)
+$ git clone https://github.com/deterrak/exos.git
 $ sudo st2 run packs.setup_virtualenv packs=EXOS
 $ sudo st2ctl reload
 ```
